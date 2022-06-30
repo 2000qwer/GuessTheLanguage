@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Guess the language</h1>
+<p> {{ question }}</p>
+<form method="POST">
+    <p>
+        <input type="radio" name="answer" value ="yes"> Yes <br>
+        <input type="radio" name="answer" value ="no"> No <br>
+    </p>
+    <input type="submit" value="Submit">
+
+</form>
+
+<p>click <a href="{{ url_for('index')}}">this</a> to end the game!</p>
+
+</body>
+</html>
