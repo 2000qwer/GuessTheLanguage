@@ -16,18 +16,6 @@ def question(id):
             return redirect(url_for('question', id=id))
     return render_template('question.html', question = questions[id])
 
-
-@app.route('/question/<int:id>', methods=['GET','POST'])
-def question(id):
-    if request.method == 'POST':
-        if request.form['answer'] == 'yes':
-            return redirect(url_for('question', id= id+1))
-        else:
-            return redirect(url_for('question', id=id))
-    return render_template('question.html', question = questions[id])
-
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
